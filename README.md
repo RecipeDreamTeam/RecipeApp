@@ -79,19 +79,19 @@ Original App Design Project
 
 ## Wireframes
 
-** Here are the wireframes of the MVP we described above:*
+***Here are the wireframes of the MVP we described above:***
 
 Landing Page with Collection of Recipes:
 
-<img src="https://ibb.co/QPmRzM5" width=600>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20main%20page.jpg" width=600><br>
 
 Details Page for a Single Recipe:
 
-<img src="https://ibb.co/FBXWn90" width=600>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20detail%20%20view.jpg" width=600><br>
 
 Add Recipe Modal:
 
-<img src="https://ibb.co/6FYhd3B" width=600>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20add%20recipe%20modal.jpg" width=600><br>
 
 ### [x] [BONUS] Digital Wireframes & Mockups
 
