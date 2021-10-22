@@ -1,4 +1,4 @@
-Original App Design Project - README Template
+Original App Design Project
 ===
 
 # APP_NAME_HERE
@@ -38,12 +38,27 @@ Original App Design Project - README Template
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Landing Page
+   * CollectionView of Recipes available to Scroll through
+   * Infinite scroll available and Pull to Refresh
+   * Stretch Goal: Filtering capability
+* Detail View Screen
+   * When recipe is clicked in collection view, view with details will show
+   * Option to exit out of detail and return to collection view
+* Add Recipe Modal
+   * When the plus icon is pressed in the main screen, the add recipe modal will slide up
+   * This will have the option to take a picture and add text and press submit to submit a recipe to the database
+   * After submission of the form, the user will be returned to the collection view
+* Stretch Story: Profile login
+   * Login Screen as initial view with username and password fields
+   * Option to login or sign up
+   * Successful login or signup leads to collection view recipe screen
+* Stretch Story: Profile Screen
+   * Profile Screen lists recipes you have favorited
+   * Screen accessed by second button in menu bar with profile icon
+* Stretch Story: Ability to favorite recipes in collectionview and detail view
+   * Pressing favorite button will show favorite icon change color
+   * Favorited items can be viewed in profile screen
 
 ### 3. Navigation
 
@@ -63,10 +78,22 @@ Original App Design Project - README Template
    * ...
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
+** Here are the wireframes of the MVP we described above:*
+
+Landing Page with Collection of Recipes:
+
+<img src="https://ibb.co/QPmRzM5" width=600>
+
+Details Page for a Single Recipe:
+
+<img src="https://ibb.co/FBXWn90" width=600>
+
+Add Recipe Modal:
+
+<img src="https://ibb.co/6FYhd3B" width=600>
+
+### [x] [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
 
