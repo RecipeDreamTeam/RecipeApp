@@ -103,13 +103,9 @@ Wireframe Flow:
 
 See Above that wireframes are digital.
 
-And here is the flow in action:
+### [x] [BONUS] Interactive Prototype
 
 <img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20walkthrough.gif" width=600><br>
-
-
-
-### [BONUS] Interactive Prototype
 
 ## Schema 
 [This section will be completed in Unit 9]
