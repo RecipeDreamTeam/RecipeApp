@@ -41,10 +41,12 @@ Original App Design Project
 * Landing Page
    * CollectionView of Recipes available to Scroll through
    * Infinite scroll available and Pull to Refresh
+   * Pressing any recipe image loads detail view screen
+   * Pressing the plus in the top right corner loads the form to submit a new recipe
    * Stretch Goal: Filtering capability
 * Detail View Screen
    * When recipe is clicked in collection view, view with details will show
-   * Option to exit out of detail and return to collection view
+   * Option to exit out of detail and return to collection view when clicking x in top right corner
 * Add Recipe Modal
    * When the plus icon is pressed in the main screen, the add recipe modal will slide up
    * This will have the option to take a picture and add text and press submit to submit a recipe to the database
@@ -83,19 +85,27 @@ Original App Design Project
 
 Landing Page with Collection of Recipes:
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20main%20page.jpg" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20main%20page.jpg" width=600><br>
 
 Details Page for a Single Recipe:
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20detail%20%20view.jpg" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20detail%20%20view.jpg" width=600><br>
 
 Add Recipe Modal:
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20add%20recipe%20modal.jpg" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20add%20recipe%20modal.jpg" width=600><br>
+
+Wireframe Flow:
+
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframes%20with%20flows.jpg" width=600><br>
 
 ### [x] [BONUS] Digital Wireframes & Mockups
 
 See Above that wireframes are digital.
+
+And here is the flow in action:
+
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20walkthrough.gif" width=600><br>
 
 
 
