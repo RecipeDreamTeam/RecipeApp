@@ -20,7 +20,7 @@ Enables user to scroll and view various recipes, and possibly allow users to be 
 - **Story:**  Users can view and scroll through recipes, click on recipe for more details, and can add recipe to database if wanted. 
 - **Market:**  Any individual looking for recipe ideas & recommendations. 
 - **Habit:**  This app can be used as often as needed, depending on whenever the user may need recipe guidance. 
-- **Scope:**  Initially, we would start with allowing people to view, scroll, and look at different recipes. We could then evolve the app into allowing users to create profiles, save recipes to their profiles, and also filter recipes by different categories such as appetizers, main dishes, and desserts. 
+- **Scope:**  Initially, we would start with allowing people to view, scroll, and look at different recipes. We could then potentially evolve the app into allowing users to create profiles, save recipes to their profiles, and also filter recipes by different categories such as appetizers, main dishes, and desserts. 
 
 ## Product Spec
 
