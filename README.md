@@ -28,13 +28,15 @@ Original App Design Project
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can view and scroll through a list of recipes
+* User can click on a recipe to get detailed recipe
+* User can add a recipe to database
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can create a profile
+* User can favorite and save recipes to their profile
+* User can filter recipes by category
 
 ### 2. Screen Archetypes
 
