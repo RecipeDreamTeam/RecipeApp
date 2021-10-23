@@ -14,7 +14,7 @@ Original App Design Project
 [Description of your app]
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
+
 - **Category:** Food & Drink
 - **Mobile:**  This app will be primarily developed for mobile use. 
 - **Story:**  Users can view and scroll through recipes, click on recipe for more details, and can add recipe to database if wanted. 
