@@ -16,11 +16,11 @@ Original App Design Project
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:** Food & Drink
-- **Mobile:**  
-- **Story:**  Make 
+- **Mobile:**  This app will be primarily developed for mobile use. 
+- **Story:**  Users can view and scroll through recipes, click on recipe for more details, and can add recipe to database if wanted. 
 - **Market:**  Any individual looking for recipe ideas & recommendations. 
 - **Habit:**  This app can be used as often as needed, depending on whenever the user may need recipe guidance. 
-- **Scope:**
+- **Scope:**  Initially, we would start with allowing people to view, scroll, and look at different recipes. We could then evolve the app into allowing users to create profiles, save recipes to their profiles, and also filter recipes by different categories such as appetizers, main dishes, and desserts. 
 
 ## Product Spec
 
