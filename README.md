@@ -68,18 +68,20 @@ Original App Design Project
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Recipes
+* Profile (stretch goal)
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Collection of recipes
+   * "+" Bar button navigation modally presents "Add recipe" screen
+   * Scroll to see continuous grid of suggested recipes
+   * Click on a recipe to proceed to details page for selected recipe
+* Recipe Details page
+   * "Back" Bar button navigation returns to collection page
+* Add recipe page
+   * "Back" bar button returns user to collection page
+   * "Submit" button adds recipe to collection and returns user to collection page
 
 ## Wireframes
 
