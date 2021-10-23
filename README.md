@@ -11,7 +11,7 @@ Original App Design Project
 
 ## Overview
 ### Description
-[Enables user to scroll and view various recipes, and possibly allow users to be able to filter recipes by category of interest.]
+Enables user to scroll and view various recipes, and possibly allow users to be able to filter recipes by category of interest.
 
 ### App Evaluation
 
