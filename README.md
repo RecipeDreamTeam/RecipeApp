@@ -15,11 +15,11 @@ Original App Design Project
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
+- **Category:** Food & Drink
+- **Mobile:**  
+- **Story:**  Make 
+- **Market:**  Any individual looking for recipe ideas & recommendations. 
+- **Habit:**  This app can be used as often as needed, depending on whenever the user may need recipe guidance. 
 - **Scope:**
 
 ## Product Spec
