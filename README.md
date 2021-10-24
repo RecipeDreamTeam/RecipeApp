@@ -1,7 +1,7 @@
 Original App Design Project
 ===
 
-# APP_NAME_HERE
+# Collabo-Recipe
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -16,11 +16,11 @@ Enables user to scroll and view various recipes, and possibly allow users to be 
 ### App Evaluation
 
 - **Category:** Food & Drink
-- **Mobile:**  This app will be primarily developed for mobile use. 
+- **Mobile:**  This app will be primarily developed for mobile use, but would perhaps be just as viable on a computer. 
 - **Story:**  Users can view and scroll through recipes, click on recipe for more details, and can add recipe to database if wanted. 
 - **Market:**  Any individual looking for recipe ideas & recommendations. 
 - **Habit:**  This app can be used as often as needed, depending on whenever the user may need recipe guidance. 
-- **Scope:**  Initially, we would start with allowing people to view, scroll, and look at different recipes. We could then potentially evolve the app into allowing users to create profiles, save recipes to their profiles, and also filter recipes by different categories such as appetizers, main dishes, and desserts. 
+- **Scope:**  Initially, we would start with allowing people to view, scroll, and look at different recipes. We could then potentially evolve the app into allowing users to create profiles, save recipes to their profiles, and also filter recipes by different categories such as appetizers, main dishes, and desserts, or by food type like italian food recipes or mexican food recipes, or by highly favorited recipes. 
 
 ## Product Spec
 
@@ -45,7 +45,7 @@ Enables user to scroll and view various recipes, and possibly allow users to be 
    * Infinite scroll available and Pull to Refresh
    * Pressing any recipe image loads detail view screen
    * Pressing the plus in the top right corner loads the form to submit a new recipe
-   * Stretch Goal: Filtering capability
+   * Stretch Goal: Filtering capability by food type, food category, or highly favorited recipes
 * Detail View Screen
    * When recipe is clicked in collection view, view with details will show
    * Option to exit out of detail and return to collection view when clicking x in top right corner
