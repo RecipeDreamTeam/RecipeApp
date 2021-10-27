@@ -112,10 +112,27 @@ See Above that wireframes are digital.
 <img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20walkthrough.gif" width=600><br>
 
 ## Schema 
-[This section will be completed in Unit 9]
+
+The objects in our app are the recipes and the users.
+
 ### Models
-[Add table of models]
+
+**Lauren to add table for Recipe Model**
+
+**Lauren to add table for User Model**
+
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Login Screen **Allison to add code snippets**
+  - (Create/POST) Log In
+  - (Create/POST) Sign Up
+- Profile Screen **Allison to add code snippets**
+  - (Read/GET) Query for all recipes favorited by user
+  - (Update/PUT) Update list of favorites to take out recipe
+- Landing Screen with grid of Recipes **Soman to add code snippets**
+  - (Read/GET) Query for list of recipes by any user
+  - (Update/PUT) Add recipe to user's favorite list of recipes when user hits favorite button
+- Detail Screen for Details on One Recipe **Bryan to add code snippets**
+  - (Read/GET) Query for full details on specific recipe
+  - (Update/PUT) Add recipe to user's favorite list of recipes when user hits favorite button
+- Create Recipe Modal **Bryan to add code snippets**
+  - (Create/POST) Create a new recipe when user taps submit button     
