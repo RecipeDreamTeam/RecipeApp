@@ -117,9 +117,27 @@ The objects in our app are the recipes and the users.
 
 ### Models
 
-**Lauren to add table for Recipe Model**
+#### Model: Recipe
 
-**Lauren to add table for User Model**
+| Property | Type | Description |
+|--------|----|-----|
+| objectId | String | unique id for the recipe (default field) |
+| author | Pointer to User | recipe author |
+| image | File | image for recipe |
+| directions | String | Recipe directions provided by author |
+| createdAt | DateTime | date when recipe was created (default field) |
+| updatedAt | DateTime | date when recipe was last updated (default field) |
+
+#### Model: User
+
+| Property | Type | Description |
+|--------|----|-----|
+| objectId | String | unique id for the recipe (default field) |
+| username | String | user's username |
+| password | String | user's password |
+| favorites | Array of pointers to Recipes | List of favorited recipes for this user |
+| createdAt | DateTime | date when recipe was created (default field) |
+| updatedAt | DateTime | date when recipe was last updated (default field) |
 
 ### Networking
 - Login Screen **Allison to add code snippets**
