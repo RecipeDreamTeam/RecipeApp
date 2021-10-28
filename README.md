@@ -82,26 +82,39 @@ Enables user to scroll and view various recipes, and possibly allow users to be 
 * Add recipe page
    * "Back" bar button returns user to collection page
    * "Submit" button adds recipe to collection and returns user to collection page
+* Login page
+   * "Login" or "Sign Up" when successful proceeds to collection page
+* Profile page
+   * "+" Bar button navigation modally presents "Add recipe" screen
+   * Click on a recipe to proceed to details page for selected recipe
 
 ## Wireframes
 
 ***Here are the wireframes of the MVP we described above:***
 
+Login Page - Initial ViewHolder:
+
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/login%20wireframe.jpg" width=600><br>
+
+Profile Page with Recipes User has Liked:
+
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/profile%20wireframe.jpg" width=600><br>
+
 Landing Page with Collection of Recipes:
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20main%20page.jpg" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/landing%20page%20wireframe.jpg" width=600><br>
 
 Details Page for a Single Recipe:
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20detail%20%20view.jpg" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/detail%20view%20recipe%20wireframe.jpg" width=600><br>
 
 Add Recipe Modal:
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20add%20recipe%20modal.jpg" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/add%20recipe%20wireframe.jpg" width=600><br>
 
 Wireframe Flow:
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframes%20with%20flows.jpg" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20flow.jpg" width=600><br>
 
 ### [x] [BONUS] Digital Wireframes & Mockups
 
@@ -109,7 +122,7 @@ See Above that wireframes are digital.
 
 ### [x] [BONUS] Interactive Prototype
 
-<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20photos%20and%20gifs/wireframe%20walkthrough.gif" width=600><br>
+<img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/interactive%20walkthrough.gif" width=600><br>
 
 ## Schema 
 
