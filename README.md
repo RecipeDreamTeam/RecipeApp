@@ -112,7 +112,7 @@ Add Recipe Modal:
 
 <img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/add%20recipe%20wireframe.jpg" width=600><br>
 
-Wireframe Flow:
+Wireframe Flow - see interactive prototype below for better visualization of where to click to move between screens:
 
 <img src="https://github.com/RecipeDreamTeam/RecipeApp/blob/main/wireframe%20flow.jpg" width=600><br>
 
