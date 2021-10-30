@@ -162,8 +162,51 @@ The objects in our app are the recipes and the users.
 - Landing Screen with grid of Recipes **Soman to add code snippets**
   - (Read/GET) Query for list of recipes by any user
   - (Update/PUT) Add recipe to user's favorite list of recipes when user hits favorite button
-- Detail Screen for Details on One Recipe **Bryan to add code snippets**
+- Detail Screen for Details on One Recipe 
   - (Read/GET) Query for full details on specific recipe
+```
+let query = PFQuery(className: "Recipes")
+query.includeKey("author")
+query.limit = 20
+        
+query.findObjectsInBackground { (posts, error) in
+    if posts != nil {
+        self.posts = posts!
+        self.tableview.reloadData()
+    }
+}
+```
   - (Update/PUT) Add recipe to user's favorite list of recipes when user hits favorite button
-- Create Recipe Modal **Bryan to add code snippets**
-  - (Create/POST) Create a new recipe when user taps submit button     
+```
+let query = PFQuery(className: "User")
+
+query.getObjectInBackgroundWithId:@objectId { (user, error) in
+    if recipe != nil {
+      self.user["favorites"].append(recipeObjectId) // confirm syntax
+```
+
+
+- Create Recipe Modal
+  - (Create/POST) Create a new recipe when user taps submit button  
+ ```   
+  @IBAction func onSubmitButton(_ sender: Any) {
+        let recipe = PFObject(className: "Recipe")
+        
+        recipe["directions"] = directionsField.text!
+        recipe["author"] = PFUser.current()!
+        
+        let imageData = imageView.image?.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        post["image"] = file
+        
+        post.saveInBackground { (success, error) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+                print("posted.")
+            } else {
+                print("error.")
+            }
+        }
+    }
+```
