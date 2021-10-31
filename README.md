@@ -190,7 +190,7 @@ The objects in our app are the recipes and the users.
   - (Read/GET) Query for all recipes favorited by user
 ```
 let query = PFQuery(className: "Recipes")
-query.includeKey("author")
+query.whereKey("author", equalTo: currentUser)
 query.includeKey("favorites")
         
 query.findObjectsInBackground { (posts, error) in
