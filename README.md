@@ -155,19 +155,88 @@ The objects in our app are the recipes and the users.
 ### Networking
 - Login Screen **Allison to add code snippets**
   - (Create/POST) Log In
+```
+  @IBAction func onSignIn(_ sender: Any) {
+      let username = usernameField.text!
+      let password = passwordField.text!
+
+      PFUser.logInWithUsername(inBackground: username, password: password) {
+          (user, error) in
+          if user != nil {
+              self.performSegue(withIdentifier: "loginSegue", sender: nil)
+          } else {
+              print("Error: \(error?.localizedDescription)")
+          }
+      }
+  }
+```
   - (Create/POST) Sign Up
+  - ```
+```
+  @IBAction func onSignUp(_ sender: Any) {
+      let user = PFUser()
+      user.username = usernameField.text
+      user.password = passwordField.text
+
+      user.signUpInBackground{(success, error) in
+          if success {
+              self.performSegue(withIdentifier: "loginSegue", sender: nil)
+          } else {
+              print("Error: \(error?.localizedDescription)")
+          }
+      }
+  }
+````
 - Profile Screen **Allison to add code snippets**
   - (Read/GET) Query for all recipes favorited by user
+```
+let query = PFQuery(className: "Recipes")
+query.includeKey("author")
+query.includeKey("favorites")
+        
+query.findObjectsInBackground { (posts, error) in
+    if posts != nil {
+        self.posts = posts!
+        self.tableview.reloadData()
+    }
+}
+```
+
   - (Update/PUT) Update list of favorites to take out recipe
+```
+let query = PFQuery(className: "User")
+
+query.getObjectInBackgroundWithId:@objectId { (user, error) in
+    if recipe != nil {
+      self.user["favorites"].pop(recipeObjectId) // confirm syntax
+```
 - Landing Screen with grid of Recipes **Soman to add code snippets**
   - (Read/GET) Query for list of recipes by any user
+```
+let query = PFQuery(className: "Recipes")
+query.limit = 20
+        
+query.findObjectsInBackground { (posts, error) in
+    if posts != nil {
+        self.posts = posts!
+        self.tableview.reloadData()
+    }
+}
+```
   - (Update/PUT) Add recipe to user's favorite list of recipes when user hits favorite button
+```
+let query = PFQuery(className: "User")
+
+query.getObjectInBackgroundWithId:@objectId { (user, error) in
+    if recipe != nil {
+      self.user["favorites"].append(recipeObjectId) // confirm syntax
+```
+
 - Detail Screen for Details on One Recipe 
   - (Read/GET) Query for full details on specific recipe
 ```
 let query = PFQuery(className: "Recipes")
-query.includeKey("author")
-query.limit = 20
+query.includeKey("objectId")
         
 query.findObjectsInBackground { (posts, error) in
     if posts != nil {
