@@ -171,7 +171,6 @@ The objects in our app are the recipes and the users.
   }
 ```
   - (Create/POST) Sign Up
-  - ```
 ```
   @IBAction func onSignUp(_ sender: Any) {
       let user = PFUser()
