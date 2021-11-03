@@ -28,14 +28,15 @@ Enables user to scroll and view various recipes, and possibly allow users to be 
 
 **Required Must-have Stories**
 
-* User can view and scroll through a list of recipes
-* User can click on a recipe to get detailed recipe
-* User can add a recipe to database
+- [ ] User can view and scroll through a list of recipes
+- [ ] User can click on a recipe to get detailed recipe
+- [ ] User can add a recipe to database
+- [ ] User can create and log into profile
+- [ ] User can favorite recipes to their profile and view the favorited recipes in their profile screen
+- [ ] User can remain persistently logged in and user can log out
 
 **Optional Nice-to-have Stories**
 
-* User can create a profile
-* User can favorite and save recipes to their profile
 * User can filter recipes by category
 
 ### 2. Screen Archetypes
