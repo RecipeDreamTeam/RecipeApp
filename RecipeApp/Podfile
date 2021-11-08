@@ -7,6 +7,7 @@ target 'RecipeApp' do
 
   # Pods for RecipeApp
   pod 'Parse'
+  pod 'AlamofireImage'
 
   target 'RecipeAppTests' do
     inherit! :search_paths
