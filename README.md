@@ -28,9 +28,9 @@ Enables user to scroll and view various recipes, and possibly allow users to be 
 
 **Required Must-have Stories**
 
-- [ ] User can view and scroll through a list of recipes
+- [x] User can view and scroll through a list of recipes
 
-Gif showing user can scroll through a list of recipes with dummy data (Parse communication to pull data to come soon). Also shows tab navigation is working and you can navigate to empty profile viewcontroller
+Gif showing user can scroll through a list of recipes with dummy data (add recipe and user login to come in Milestone 2, which will then have this view reflect real entries). Also shows tab navigation is working and you can navigate to empty profile viewcontroller
 
 <img src="http://g.recordit.co/UU4gAZdU0W.gif" width=250><br>
 - [ ] User can click on a recipe to get detailed recipe
