@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import AlamofireImage
+import Parse
 
 class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     
     //need to replace with array of PFObjects when API call to get recipes is set up
-    var recipes = [Recipe]()
+    var recipes = [PFObject]()
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -33,16 +35,30 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         layout.itemSize = CGSize(width: width, height: width*1.2)
 
         //placeholder data structure holding recipes until we have api call to get this
-        for i in 1...20 {
-            //create recipe
-            let title = "Test \(i)"
-            let image = UIImage(named: "rice-png")!
-            let recipe = Recipe(givenTitle: title, givenImage: image)
-            recipes.append(recipe)
-            collectionView.reloadData()
-        }
+//        for i in 1...20 {
+//            //create recipe
+//            let title = "Test \(i)"
+//            let image = UIImage(named: "rice-png")!
+//            let recipe = Recipe(givenTitle: title, givenImage: image)
+//            recipes.append(recipe)
+//            collectionView.reloadData()
+//        }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let query = PFQuery(className: "Recipe")
+        query.includeKeys(["author"])
+        query.limit = 20
+        
+        query.findObjectsInBackground { (recipes, error) in
+            if recipes != nil {
+                self.recipes = recipes!
+                self.collectionView.reloadData()
+            }
+        }
+    }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return recipes.count
@@ -53,11 +69,14 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         
         //need to switch out final config when we have recipe PFObjects
         let recipe = recipes[indexPath.item]
-        let title = recipe.title
-        let image = recipe.image
+        let title = recipe["title"] as? String
+        
+        let imageFile = recipe["image"] as! PFFileObject
+        let urlString = imageFile.url!
+        let url = URL(string: urlString)!
         
         cell.recipeTitleLabel.text = title
-        cell.recipeImageView.image = image
+        cell.recipeImageView.af.setImage(withURL: url)
         
         return cell
     }
