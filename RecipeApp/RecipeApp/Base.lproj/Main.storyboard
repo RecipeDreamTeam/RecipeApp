@@ -112,7 +112,13 @@
                             <constraint firstItem="Tyh-Cr-0TZ" firstAttribute="leading" secondItem="KxN-9L-qRJ" secondAttribute="leading" id="mqR-Q3-qWT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Collabo-Recipe" id="2Jc-YY-yQv"/>
+                    <navigationItem key="navigationItem" title="Collabo-Recipe" id="2Jc-YY-yQv">
+                        <barButtonItem key="rightBarButtonItem" title="+" image="plus" catalog="system" id="guW-2j-VkN">
+                            <connections>
+                                <segue destination="kv7-ut-gT1" kind="presentation" id="LDJ-BI-bWa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Tyh-Cr-0TZ" id="kor-Cz-CbH"/>
                     </connections>
@@ -120,6 +126,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h9b-Pa-Z88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2221.739130434783" y="-352.23214285714283"/>
+        </scene>
+        <!--Add Recipe View Controller-->
+        <scene sceneID="VtQ-tV-Uc7">
+            <objects>
+                <viewController id="kv7-ut-gT1" customClass="AddRecipeViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sda-Ug-WkR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your Recipe:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bes-Rg-Ul2">
+                                <rect key="frame" x="16" y="16" width="382" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Recipe Directions: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FJ6-uT-nzj">
+                                <rect key="frame" x="24" y="437" width="366" height="309"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzg-b6-dzS">
+                                <rect key="frame" x="309" y="782" width="81" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.54392612019999997" green="0.51028641230000005" blue="0.64311079550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSubmitRecipe:" destination="kv7-ut-gT1" eventType="touchUpInside" id="IOa-jq-Yv7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Recipe Title Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="68c-gm-izF">
+                                <rect key="frame" x="24" y="69" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ll9-LM-Iuo">
+                                <rect key="frame" x="60" y="119.5" width="294" height="292.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ll9-LM-Iuo" secondAttribute="height" multiplier="1:1" id="mxZ-ro-bBU"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="RcB-im-QhR" appends="YES" id="ml6-SK-jgN"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dnk-gI-NGI"/>
+                        <color key="backgroundColor" red="0.54392612019999997" green="0.51028641230000005" blue="0.64311079550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Dnk-gI-NGI" firstAttribute="trailing" secondItem="FJ6-uT-nzj" secondAttribute="trailing" constant="24" id="7WZ-t1-Bxv"/>
+                            <constraint firstItem="ll9-LM-Iuo" firstAttribute="leading" secondItem="Dnk-gI-NGI" secondAttribute="leading" constant="60" id="7jV-B5-jqZ"/>
+                            <constraint firstItem="Dnk-gI-NGI" firstAttribute="trailing" secondItem="68c-gm-izF" secondAttribute="trailing" constant="24" id="7oe-aB-ypj"/>
+                            <constraint firstItem="yzg-b6-dzS" firstAttribute="top" secondItem="FJ6-uT-nzj" secondAttribute="bottom" constant="36" id="8bx-qq-lKh"/>
+                            <constraint firstItem="Dnk-gI-NGI" firstAttribute="trailing" secondItem="yzg-b6-dzS" secondAttribute="trailing" constant="24" id="JZQ-Et-6tO"/>
+                            <constraint firstItem="68c-gm-izF" firstAttribute="top" secondItem="bes-Rg-Ul2" secondAttribute="bottom" constant="24" id="MRJ-O9-EEH"/>
+                            <constraint firstItem="FJ6-uT-nzj" firstAttribute="top" secondItem="ll9-LM-Iuo" secondAttribute="bottom" constant="24" id="OML-3P-37y"/>
+                            <constraint firstItem="Dnk-gI-NGI" firstAttribute="trailing" secondItem="bes-Rg-Ul2" secondAttribute="trailing" constant="16" id="OwX-yS-LJ2"/>
+                            <constraint firstItem="68c-gm-izF" firstAttribute="leading" secondItem="Dnk-gI-NGI" secondAttribute="leading" constant="24" id="QOD-eD-AOp"/>
+                            <constraint firstItem="bes-Rg-Ul2" firstAttribute="leading" secondItem="Dnk-gI-NGI" secondAttribute="leading" constant="16" id="QQI-Qg-xRf"/>
+                            <constraint firstItem="FJ6-uT-nzj" firstAttribute="leading" secondItem="Dnk-gI-NGI" secondAttribute="leading" constant="24" id="Y4F-hp-qBe"/>
+                            <constraint firstItem="ll9-LM-Iuo" firstAttribute="top" secondItem="68c-gm-izF" secondAttribute="bottom" constant="16" id="ab5-bt-bcU"/>
+                            <constraint firstItem="bes-Rg-Ul2" firstAttribute="top" secondItem="Dnk-gI-NGI" secondAttribute="top" constant="16" id="hQX-Zk-8LP"/>
+                            <constraint firstItem="Dnk-gI-NGI" firstAttribute="trailing" secondItem="ll9-LM-Iuo" secondAttribute="trailing" constant="60" id="iV7-Zp-nZM"/>
+                            <constraint firstAttribute="bottom" secondItem="yzg-b6-dzS" secondAttribute="bottom" constant="24" id="oyl-Tt-k1X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recipeDirectionsView" destination="FJ6-uT-nzj" id="Eu1-fU-iIh"/>
+                        <outlet property="recipeImageView" destination="ll9-LM-Iuo" id="hT7-cy-bwA"/>
+                        <outlet property="recipeTitleField" destination="68c-gm-izF" id="bzF-fv-3UZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmQ-U4-PHg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="RcB-im-QhR">
+                    <connections>
+                        <action selector="onClickImage:" destination="kv7-ut-gT1" id="02u-se-jT9"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3102.898550724638" y="-353.57142857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="lJo-Df-aSI">
@@ -165,13 +259,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
         <image name="feed_tab" width="25" height="25"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profile_tab" width="25" height="25"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
