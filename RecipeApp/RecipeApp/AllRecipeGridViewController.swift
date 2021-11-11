@@ -34,6 +34,7 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         
         myRefreshControl.addTarget(self, action: #selector(loadRecipes), for: .valueChanged)
         collectionView.refreshControl = myRefreshControl
+        
 
     }
     
@@ -48,6 +49,7 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         //add author back in when login complete
         //query.includeKeys(["author"])
         query.limit = 20
+        query.order(byDescending: "createdAt")
         
         query.findObjectsInBackground { (recipes, error) in
             if recipes != nil {
