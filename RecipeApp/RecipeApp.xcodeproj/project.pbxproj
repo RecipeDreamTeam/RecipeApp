@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2600839B273DC57D002AC5A4 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600839A273DC57D002AC5A4 /* AddRecipeViewController.swift */; };
 		261EFFEC2735A6AE00CAEAE7 /* AllRecipeGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EFFEB2735A6AE00CAEAE7 /* AllRecipeGridViewController.swift */; };
 		261EFFEE2735AB1800CAEAE7 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EFFED2735AB1800CAEAE7 /* Recipe.swift */; };
 		261EFFF02735B0C900CAEAE7 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261EFFEF2735B0C900CAEAE7 /* RecipeCell.swift */; };
@@ -46,6 +47,7 @@
 		083DA42FF3EF4D93E187E3B0 /* Pods-RecipeApp-RecipeAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp-RecipeAppUITests.release.xcconfig"; path = "Target Support Files/Pods-RecipeApp-RecipeAppUITests/Pods-RecipeApp-RecipeAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0F1B4B692CA96CD0FE2F1EDC /* Pods-RecipeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp.debug.xcconfig"; path = "Target Support Files/Pods-RecipeApp/Pods-RecipeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1E5C86D649AC537FD61BE139 /* Pods_RecipeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2600839A273DC57D002AC5A4 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		261EFFEB2735A6AE00CAEAE7 /* AllRecipeGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipeGridViewController.swift; sourceTree = "<group>"; };
 		261EFFED2735AB1800CAEAE7 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		261EFFEF2735B0C900CAEAE7 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				261EFFED2735AB1800CAEAE7 /* Recipe.swift */,
 				261EFFEF2735B0C900CAEAE7 /* RecipeCell.swift */,
 				D36A73C3273CE37500698A40 /* LoginViewController.swift */,
+				2600839A273DC57D002AC5A4 /* AddRecipeViewController.swift */,
 			);
 			path = RecipeApp;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			files = (
 				D36A73C4273CE37500698A40 /* LoginViewController.swift in Sources */,
 				261EFFF02735B0C900CAEAE7 /* RecipeCell.swift in Sources */,
+				2600839B273DC57D002AC5A4 /* AddRecipeViewController.swift in Sources */,
 				261EFFEE2735AB1800CAEAE7 /* Recipe.swift in Sources */,
 				330A43D7273388300032799F /* ViewController.swift in Sources */,
 				330A43D3273388300032799F /* AppDelegate.swift in Sources */,

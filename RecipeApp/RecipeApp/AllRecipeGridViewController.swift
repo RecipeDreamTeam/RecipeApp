@@ -11,10 +11,8 @@ import Parse
 
 class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    
-    //need to replace with array of PFObjects when API call to get recipes is set up
     var recipes = [PFObject]()
-    
+    let myRefreshControl = UIRefreshControl()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -33,29 +31,31 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         
         
         layout.itemSize = CGSize(width: width, height: width*1.2)
+        
+        myRefreshControl.addTarget(self, action: #selector(loadRecipes), for: .valueChanged)
+        collectionView.refreshControl = myRefreshControl
+        
 
-        //placeholder data structure holding recipes until we have api call to get this
-//        for i in 1...20 {
-//            //create recipe
-//            let title = "Test \(i)"
-//            let image = UIImage(named: "rice-png")!
-//            let recipe = Recipe(givenTitle: title, givenImage: image)
-//            recipes.append(recipe)
-//            collectionView.reloadData()
-//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        let query = PFQuery(className: "Recipe")
-        query.includeKeys(["author"])
+        loadRecipes()
+
+    }
+    
+    @objc func loadRecipes(){
+        let query = PFQuery(className: "Recipes")
+        //add author back in when login complete
+        //query.includeKeys(["author"])
         query.limit = 20
+        query.order(byDescending: "createdAt")
         
         query.findObjectsInBackground { (recipes, error) in
             if recipes != nil {
                 self.recipes = recipes!
                 self.collectionView.reloadData()
+                self.myRefreshControl.endRefreshing()
             }
         }
     }
