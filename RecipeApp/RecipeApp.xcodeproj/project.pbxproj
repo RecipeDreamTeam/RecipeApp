@@ -23,6 +23,7 @@
 		4F731B8A7A8D70A0134AED33 /* Pods_RecipeApp_RecipeAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F7438FC66E9AC7C01DD3E3 /* Pods_RecipeApp_RecipeAppUITests.framework */; };
 		78D6A405C62FA50DEA62BBA6 /* Pods_RecipeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5C86D649AC537FD61BE139 /* Pods_RecipeApp.framework */; };
 		BF61C159E7E52AB88FF1D3ED /* Pods_RecipeAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4885701E084D1C1A51521B7 /* Pods_RecipeAppTests.framework */; };
+		D36A73C4273CE37500698A40 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36A73C3273CE37500698A40 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		B1F49DFEDF5BCFA8866DDEF3 /* Pods-RecipeAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeAppTests.release.xcconfig"; path = "Target Support Files/Pods-RecipeAppTests/Pods-RecipeAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8E4A43E1941078EF24B8128 /* Pods-RecipeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeApp.release.xcconfig"; path = "Target Support Files/Pods-RecipeApp/Pods-RecipeApp.release.xcconfig"; sourceTree = "<group>"; };
 		C2F7438FC66E9AC7C01DD3E3 /* Pods_RecipeApp_RecipeAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeApp_RecipeAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36A73C3273CE37500698A40 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				261EFFEB2735A6AE00CAEAE7 /* AllRecipeGridViewController.swift */,
 				261EFFED2735AB1800CAEAE7 /* Recipe.swift */,
 				261EFFEF2735B0C900CAEAE7 /* RecipeCell.swift */,
+				D36A73C3273CE37500698A40 /* LoginViewController.swift */,
 				2600839A273DC57D002AC5A4 /* AddRecipeViewController.swift */,
 			);
 			path = RecipeApp;
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36A73C4273CE37500698A40 /* LoginViewController.swift in Sources */,
 				261EFFF02735B0C900CAEAE7 /* RecipeCell.swift in Sources */,
 				2600839B273DC57D002AC5A4 /* AddRecipeViewController.swift in Sources */,
 				261EFFEE2735AB1800CAEAE7 /* Recipe.swift in Sources */,
