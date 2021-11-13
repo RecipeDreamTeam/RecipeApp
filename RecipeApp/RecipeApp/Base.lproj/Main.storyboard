@@ -98,6 +98,7 @@
                                         <connections>
                                             <outlet property="recipeImageView" destination="LGZ-8I-ZgY" id="1G7-6d-Q5v"/>
                                             <outlet property="recipeTitleLabel" destination="CVo-Ap-vVc" id="JiO-tT-8AX"/>
+                                            <segue destination="hqa-Al-5TM" kind="show" id="rLf-jS-3vK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,6 +209,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1C-JB-TJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-785" y="114"/>
+        </scene>
+        <!--Recipe Details View Controller-->
+        <scene sceneID="tCa-Ks-n0a">
+            <objects>
+                <viewController id="hqa-Al-5TM" customClass="RecipeDetailsViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9vf-mb-8id">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jw5-mh-BFy">
+                                <rect key="frame" x="0.0" y="104" width="414" height="195"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GhO-VX-8tS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HeZ-Nr-eLT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ge-u2-LGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2260.8695652173915" y="397.76785714285711"/>
         </scene>
         <!--Add Recipe View Controller-->
         <scene sceneID="VtQ-tV-Uc7">
