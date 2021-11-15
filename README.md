@@ -37,7 +37,7 @@ Gif showing user can scroll through a list of recipes. Also shows tab navigation
 - [x] User can add a recipe to database
 
 <img src="http://g.recordit.co/yKZhZQQxHM.gif" width=250><br>
-- [x] User can create and log into profile
+- [x] User can create and log into profile<br>
 <img src="https://media.giphy.com/media/x42iaz6EDrs1P04x6a/giphy.gif" width=250><br>
 - [ ] User can favorite recipes to their profile and view the favorited recipes in their profile screen
 - [ ] User can remain persistently logged in and user can log out
