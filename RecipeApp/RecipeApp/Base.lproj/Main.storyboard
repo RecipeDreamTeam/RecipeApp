@@ -54,31 +54,32 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-LJ-iQA">
-                                <rect key="frame" x="16" y="433" width="382" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Directions" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZX-G5-dKX">
+                                <rect key="frame" x="16" y="433" width="382" height="364"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vaG-lt-YfY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ASc-LJ-iQA" firstAttribute="top" secondItem="taJ-wB-MwN" secondAttribute="bottom" constant="8" id="9fT-om-iwD"/>
+                            <constraint firstItem="qZX-G5-dKX" firstAttribute="top" secondItem="taJ-wB-MwN" secondAttribute="bottom" constant="8" id="02j-cX-A4K"/>
                             <constraint firstItem="vaG-lt-YfY" firstAttribute="trailing" secondItem="taJ-wB-MwN" secondAttribute="trailing" constant="16" id="Jbf-Nk-H4N"/>
                             <constraint firstItem="32g-hH-hWR" firstAttribute="leading" secondItem="vaG-lt-YfY" secondAttribute="leading" id="O0I-hH-uHI"/>
-                            <constraint firstItem="vaG-lt-YfY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ASc-LJ-iQA" secondAttribute="bottom" constant="16" id="Ug1-hu-mbl"/>
                             <constraint firstItem="32g-hH-hWR" firstAttribute="trailing" secondItem="vaG-lt-YfY" secondAttribute="trailing" id="XG4-e3-yI4"/>
-                            <constraint firstItem="ASc-LJ-iQA" firstAttribute="leading" secondItem="vaG-lt-YfY" secondAttribute="leading" constant="16" id="ohp-7E-Tpg"/>
+                            <constraint firstItem="vaG-lt-YfY" firstAttribute="bottom" secondItem="qZX-G5-dKX" secondAttribute="bottom" constant="16" id="cI2-Ma-kft"/>
+                            <constraint firstItem="qZX-G5-dKX" firstAttribute="leading" secondItem="vaG-lt-YfY" secondAttribute="leading" constant="16" id="eJd-qK-Zi8"/>
+                            <constraint firstItem="vaG-lt-YfY" firstAttribute="trailing" secondItem="qZX-G5-dKX" secondAttribute="trailing" constant="16" id="l9F-c9-XWI"/>
                             <constraint firstItem="taJ-wB-MwN" firstAttribute="leading" secondItem="vaG-lt-YfY" secondAttribute="leading" constant="16" id="sS3-8T-THZ"/>
                             <constraint firstItem="taJ-wB-MwN" firstAttribute="top" secondItem="32g-hH-hWR" secondAttribute="bottom" constant="8" id="tzE-DI-Y1q"/>
                             <constraint firstItem="32g-hH-hWR" firstAttribute="top" secondItem="vaG-lt-YfY" secondAttribute="top" id="v1M-3S-lhM"/>
-                            <constraint firstItem="vaG-lt-YfY" firstAttribute="trailing" secondItem="ASc-LJ-iQA" secondAttribute="trailing" constant="16" id="xsc-4w-CTn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9zE-qD-9t3"/>
                     <connections>
-                        <outlet property="detailRecipeDirectionsView" destination="ASc-LJ-iQA" id="GMB-bE-kDP"/>
+                        <outlet property="detailRecipeDirectionsView" destination="qZX-G5-dKX" id="qkd-2D-1jB"/>
                         <outlet property="detailRecipeImageView" destination="32g-hH-hWR" id="HhP-3T-QVZ"/>
                         <outlet property="detailRecipeTitleView" destination="taJ-wB-MwN" id="M2n-qT-nUT"/>
                     </connections>

@@ -16,8 +16,8 @@ class RecipeDetailsViewController: UIViewController {
     
     @IBOutlet weak var detailRecipeImageView: UIImageView!
     @IBOutlet weak var detailRecipeTitleView: UILabel!
-    @IBOutlet weak var detailRecipeDirectionsView: UILabel!
     
+    @IBOutlet weak var detailRecipeDirectionsView: UITextView!
     
     
     override func viewDidLoad() {
