@@ -92,28 +92,6 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         let detailViewController = segue.destination as! RecipeDetailsViewController
         detailViewController.recipe = recipe
     }
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        //Get the new view controller using segue.destination.
-//       // Pass the selected object to the new view controller.
-//
-//       // Find the selected recipe
-//       let cell = sender as! UICollectionViewCell
-//       let indexPath = collectionView.indexPath(for:
-//       cell)!
-//       let recipe = recipes[indexPath.row]
-//
-//       // Pass the selected movie to the details view controller
-//       let detailsViewController = segue.destination as! RecipeDetailsViewController
-//        
-//        print(recipe)
-//       detailsViewController.recipe = recipe
-//
-//
-////       collectionView.deselectRow(at: indexPath, animated: true)
-//    }
-
 
 }
     
