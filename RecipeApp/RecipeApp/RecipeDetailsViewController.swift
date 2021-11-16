@@ -23,7 +23,6 @@ class RecipeDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = .purple
         navigationController?.navigationBar.tintColor = .white
 
         detailRecipeTitleView.text = recipe["title"] as? String
