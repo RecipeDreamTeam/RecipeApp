@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="jOu-5i-ACW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGs-e6-134">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm the empty profile view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rav-Fz-aXl">
@@ -34,16 +34,69 @@
             </objects>
             <point key="canvasLocation" x="1314" y="398"/>
         </scene>
+        <!--Recipe Details View Controller-->
+        <scene sceneID="V6V-xt-i9w">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Ctp-8r-smY" customClass="RecipeDetailsViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FKf-Vj-giX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="32g-hH-hWR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="32g-hH-hWR" secondAttribute="height" multiplier="69:50" id="Yqf-lp-AC4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taJ-wB-MwN">
+                                <rect key="frame" x="16" y="396" width="382" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-LJ-iQA">
+                                <rect key="frame" x="16" y="433" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vaG-lt-YfY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ASc-LJ-iQA" firstAttribute="top" secondItem="taJ-wB-MwN" secondAttribute="bottom" constant="8" id="9fT-om-iwD"/>
+                            <constraint firstItem="vaG-lt-YfY" firstAttribute="trailing" secondItem="taJ-wB-MwN" secondAttribute="trailing" constant="16" id="Jbf-Nk-H4N"/>
+                            <constraint firstItem="32g-hH-hWR" firstAttribute="leading" secondItem="vaG-lt-YfY" secondAttribute="leading" id="O0I-hH-uHI"/>
+                            <constraint firstItem="vaG-lt-YfY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ASc-LJ-iQA" secondAttribute="bottom" constant="16" id="Ug1-hu-mbl"/>
+                            <constraint firstItem="32g-hH-hWR" firstAttribute="trailing" secondItem="vaG-lt-YfY" secondAttribute="trailing" id="XG4-e3-yI4"/>
+                            <constraint firstItem="ASc-LJ-iQA" firstAttribute="leading" secondItem="vaG-lt-YfY" secondAttribute="leading" constant="16" id="ohp-7E-Tpg"/>
+                            <constraint firstItem="taJ-wB-MwN" firstAttribute="leading" secondItem="vaG-lt-YfY" secondAttribute="leading" constant="16" id="sS3-8T-THZ"/>
+                            <constraint firstItem="taJ-wB-MwN" firstAttribute="top" secondItem="32g-hH-hWR" secondAttribute="bottom" constant="8" id="tzE-DI-Y1q"/>
+                            <constraint firstItem="32g-hH-hWR" firstAttribute="top" secondItem="vaG-lt-YfY" secondAttribute="top" id="v1M-3S-lhM"/>
+                            <constraint firstItem="vaG-lt-YfY" firstAttribute="trailing" secondItem="ASc-LJ-iQA" secondAttribute="trailing" constant="16" id="xsc-4w-CTn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9zE-qD-9t3"/>
+                    <connections>
+                        <outlet property="detailRecipeDirectionsView" destination="ASc-LJ-iQA" id="GMB-bE-kDP"/>
+                        <outlet property="detailRecipeImageView" destination="32g-hH-hWR" id="HhP-3T-QVZ"/>
+                        <outlet property="detailRecipeTitleView" destination="taJ-wB-MwN" id="M2n-qT-nUT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrY-zC-XYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2234.7826086956525" y="393.75"/>
+        </scene>
         <!--Collabo-Recipe-->
         <scene sceneID="77V-TL-bg3">
             <objects>
                 <viewController id="Nvr-aI-VGu" customClass="AllRecipeGridViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWt-hG-0N1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tyh-Cr-0TZ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RwB-Um-gVe">
                                     <size key="itemSize" width="176" height="223"/>
@@ -98,7 +151,7 @@
                                         <connections>
                                             <outlet property="recipeImageView" destination="LGZ-8I-ZgY" id="1G7-6d-Q5v"/>
                                             <outlet property="recipeTitleLabel" destination="CVo-Ap-vVc" id="JiO-tT-8AX"/>
-                                            <segue destination="hqa-Al-5TM" kind="show" id="rLf-jS-3vK"/>
+                                            <segue destination="Ctp-8r-smY" kind="show" id="OtW-8W-eZL"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -210,28 +263,6 @@
             </objects>
             <point key="canvasLocation" x="-785" y="114"/>
         </scene>
-        <!--Recipe Details View Controller-->
-        <scene sceneID="tCa-Ks-n0a">
-            <objects>
-                <viewController id="hqa-Al-5TM" customClass="RecipeDetailsViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9vf-mb-8id">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jw5-mh-BFy">
-                                <rect key="frame" x="0.0" y="104" width="414" height="195"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="GhO-VX-8tS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="HeZ-Nr-eLT"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ge-u2-LGn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2260.8695652173915" y="397.76785714285711"/>
-        </scene>
         <!--Add Recipe View Controller-->
         <scene sceneID="VtQ-tV-Uc7">
             <objects>
@@ -324,7 +355,7 @@
         <scene sceneID="lJo-Df-aSI">
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="MNL-ds-gbK" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IcG-nW-HPc">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="IcG-nW-HPc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="selectedImageTintColor" red="0.436708645640006" green="0.20962823575580453" blue="0.65445470332828282" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
