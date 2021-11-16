@@ -33,7 +33,9 @@ Enables user to scroll and view various recipes, and possibly allow users to be 
 Gif showing user can scroll through a list of recipes. Also shows tab navigation is working and you can navigate to empty profile viewcontroller
 
 <img src="http://g.recordit.co/1oXvZHYxlC.gif" width=250><br>
-- [ ] User can click on a recipe to get detailed recipe
+- [x] User can click on a recipe to get detailed recipe
+
+<img src="http://g.recordit.co/HuDyeF96CM.gif" width=250><br>
 - [x] User can add a recipe to database
 
 <img src="http://g.recordit.co/yKZhZQQxHM.gif" width=250><br>
