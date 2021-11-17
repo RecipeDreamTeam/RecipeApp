@@ -12,27 +12,106 @@
         <!--Profile-->
         <scene sceneID="yPV-j6-nSz">
             <objects>
-                <viewController id="jOu-5i-ACW" sceneMemberID="viewController">
+                <viewController id="jOu-5i-ACW" customClass="ProfileViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGs-e6-134">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm the empty profile view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rav-Fz-aXl">
-                                <rect key="frame" x="109" y="361" width="196" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lqk-Lx-xeq">
+                                <rect key="frame" x="0.0" y="152" width="414" height="661"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SQ4-h8-DnX">
+                                    <size key="itemSize" width="176" height="223"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfileRecipeCell" id="S2s-Uv-gsQ" customClass="ProfileRecipeCell" customModule="RecipeApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="223"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0lT-m9-KhN">
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="223"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cIR-Pa-3bi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="176"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="cIR-Pa-3bi" secondAttribute="height" multiplier="1:1" id="CMn-nA-0bc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4d-JB-DCo">
+                                                    <rect key="frame" x="0.0" y="176" width="176" height="47"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKq-CZ-TeR">
+                                                            <rect key="frame" x="8" y="13" width="148" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.54392612019999997" green="0.51028641230000005" blue="0.64311079550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="IKq-CZ-TeR" secondAttribute="trailing" constant="20" id="HEW-Xr-h7U"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="Lsd-YW-Il5"/>
+                                                        <constraint firstItem="IKq-CZ-TeR" firstAttribute="leading" secondItem="v4d-JB-DCo" secondAttribute="leading" constant="8" id="YMQ-cC-dwf"/>
+                                                        <constraint firstItem="IKq-CZ-TeR" firstAttribute="centerY" secondItem="v4d-JB-DCo" secondAttribute="centerY" id="y2k-Zf-bZo"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v4d-JB-DCo" firstAttribute="top" secondItem="cIR-Pa-3bi" secondAttribute="bottom" id="BgK-Qy-c9z"/>
+                                                <constraint firstAttribute="bottom" secondItem="v4d-JB-DCo" secondAttribute="bottom" id="H30-vQ-Rr0"/>
+                                                <constraint firstAttribute="trailing" secondItem="cIR-Pa-3bi" secondAttribute="trailing" id="UBg-f7-yfB"/>
+                                                <constraint firstItem="v4d-JB-DCo" firstAttribute="leading" secondItem="0lT-m9-KhN" secondAttribute="leading" id="c1I-Gy-hV3"/>
+                                                <constraint firstItem="cIR-Pa-3bi" firstAttribute="top" secondItem="0lT-m9-KhN" secondAttribute="top" id="gi3-tW-Hdv"/>
+                                                <constraint firstAttribute="trailing" secondItem="v4d-JB-DCo" secondAttribute="trailing" id="l1l-bW-Ppw"/>
+                                                <constraint firstItem="cIR-Pa-3bi" firstAttribute="leading" secondItem="0lT-m9-KhN" secondAttribute="leading" id="pbf-rM-GIG"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="176" height="223"/>
+                                        <connections>
+                                            <outlet property="profileRecipeImageView" destination="cIR-Pa-3bi" id="Wwp-WR-zIk"/>
+                                            <outlet property="profileRecipeTitle" destination="IKq-CZ-TeR" id="sgn-PK-l1n"/>
+                                            <segue destination="Ctp-8r-smY" kind="show" id="Edm-ax-sbP"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Favorite Recipes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XS-n1-sI4">
+                                <rect key="frame" x="16" y="104" width="382" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NTU-0d-P1e"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lqk-Lx-xeq" firstAttribute="trailing" secondItem="NTU-0d-P1e" secondAttribute="trailing" id="2Hi-2h-12g"/>
+                            <constraint firstItem="4XS-n1-sI4" firstAttribute="leading" secondItem="NTU-0d-P1e" secondAttribute="leading" constant="16" id="3ql-QC-nRy"/>
+                            <constraint firstAttribute="bottom" secondItem="lqk-Lx-xeq" secondAttribute="bottom" id="SFA-AI-r84"/>
+                            <constraint firstItem="lqk-Lx-xeq" firstAttribute="top" secondItem="4XS-n1-sI4" secondAttribute="bottom" constant="16" id="TF9-pu-efn"/>
+                            <constraint firstItem="4XS-n1-sI4" firstAttribute="top" secondItem="NTU-0d-P1e" secondAttribute="top" constant="16" id="eV6-mK-kE7"/>
+                            <constraint firstItem="lqk-Lx-xeq" firstAttribute="leading" secondItem="NTU-0d-P1e" secondAttribute="leading" id="prF-ey-BIa"/>
+                            <constraint firstItem="NTU-0d-P1e" firstAttribute="trailing" secondItem="4XS-n1-sI4" secondAttribute="trailing" constant="16" id="wXd-N3-Z3x"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="ykU-ZY-gEI"/>
+                    <navigationItem key="navigationItem" title="Profile" id="gUa-7r-UNg">
+                        <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" id="8vS-4M-db0">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="kv7-ut-gT1" kind="presentation" id="uO3-gl-ixc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="lqk-Lx-xeq" id="8BN-Nj-QHA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvx-ZQ-rRx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314" y="398"/>
+            <point key="canvasLocation" x="1311.5942028985507" y="1130.3571428571429"/>
         </scene>
         <!--Recipe Details View Controller-->
         <scene sceneID="V6V-xt-i9w">
@@ -86,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrY-zC-XYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2234.7826086956525" y="393.75"/>
+            <point key="canvasLocation" x="2222" y="398"/>
         </scene>
         <!--Collabo-Recipe-->
         <scene sceneID="77V-TL-bg3">
@@ -129,7 +208,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.47261209570000001" green="0.44425860820000002" blue="0.56530145210000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.54392612019999997" green="0.51028641230000005" blue="0.64311079550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstItem="CVo-Ap-vVc" firstAttribute="centerY" secondItem="jQf-zq-w3D" secondAttribute="centerY" id="LkV-sW-Hmf"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="ODU-oL-78l"/>
@@ -363,7 +442,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="qua-Tp-PDx" kind="relationship" relationship="viewControllers" id="l1A-mz-6rp"/>
-                        <segue destination="jOu-5i-ACW" kind="relationship" relationship="viewControllers" id="8s8-9h-hPS"/>
+                        <segue destination="RO9-s8-Reb" kind="relationship" relationship="viewControllers" id="8s8-9h-hPS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwL-qR-aW0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -379,7 +458,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EfE-kg-gki">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.63233358158346897" green="0.63684220588523421" blue="0.65036807879052982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="systemGray2Color"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -394,7 +473,35 @@
             </objects>
             <point key="canvasLocation" x="1311.5942028985507" y="-352.23214285714283"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="MvT-eb-0C8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RO9-s8-Reb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile_tab" id="ykU-ZY-gEI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OPS-HN-WAg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemGray2Color"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jOu-5i-ACW" kind="relationship" relationship="rootViewController" id="2wI-MS-AbK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAX-ok-sQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313.0434782608697" y="397.76785714285711"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uO3-gl-ixc"/>
+        <segue reference="Edm-ax-sbP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Food-Spaghetti-icon" width="128" height="128"/>
         <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
