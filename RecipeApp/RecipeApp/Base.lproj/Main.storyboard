@@ -98,6 +98,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="gUa-7r-UNg">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Oed-fu-uF8">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onLogoutButton:" destination="jOu-5i-ACW" id="OZD-9n-OXR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" image="plus" catalog="system" id="8vS-4M-db0">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -265,7 +271,7 @@
         <!--Login View Controller-->
         <scene sceneID="JNw-N7-aVU">
             <objects>
-                <viewController id="W2c-hl-SVD" customClass="LoginViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="W2c-hl-SVD" customClass="LoginViewController" customModule="RecipeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJt-E1-Et3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
