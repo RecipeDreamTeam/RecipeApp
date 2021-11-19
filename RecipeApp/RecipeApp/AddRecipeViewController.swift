@@ -26,9 +26,7 @@ class AddRecipeViewController: UIViewController, UIImagePickerControllerDelegate
         let imageData = recipeImageView.image!.pngData()
         let file = PFFileObject(name: "image.png", data: imageData!)
         recipe["image"] = file
-        
-        //add authors when login finished
-        //recipe["author"] = PFUser.current()!
+        recipe["author"] = PFUser.current()!
         
         recipe.saveInBackground { (success, error) in
             if success {

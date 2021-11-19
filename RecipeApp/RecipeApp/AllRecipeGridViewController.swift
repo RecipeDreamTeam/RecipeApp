@@ -76,8 +76,24 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         
         cell.recipeTitleLabel.text = title
         cell.recipeImageView.af.setImage(withURL: url)
+        cell.favButton.tag = indexPath.item
+        cell.favButton.addTarget(self, action: #selector(self.addFavorite), for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func addFavorite(sender: UIButton) {
+        let favorite = PFObject(className: "Favorites")
+        favorite["user"] = PFUser.current()!
+        favorite["recipe"] = recipes[sender.tag]
+        
+        favorite.saveInBackground { (success, error) in
+            if success {
+                print("saved")
+            } else {
+                print("error")
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

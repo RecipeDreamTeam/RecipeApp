@@ -207,17 +207,32 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQf-zq-w3D">
                                                     <rect key="frame" x="0.0" y="176" width="176" height="47"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVo-Ap-vVc">
-                                                            <rect key="frame" x="8" y="13" width="148" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVo-Ap-vVc">
+                                                            <rect key="frame" x="8" y="13.5" width="148" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J8-mL-KqM" userLabel="favButton">
+                                                            <rect key="frame" x="138" y="8" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="K8p-jf-ZLn"/>
+                                                                <constraint firstAttribute="width" constant="30" id="lBR-pk-uHw"/>
+                                                            </constraints>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="FavButton" image="favor-icon"/>
+                                                            <connections>
+                                                                <action selector="favoriteRecipe:" destination="TsM-Va-WLc" eventType="touchUpInside" id="scY-aR-roq"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.54392612019999997" green="0.51028641230000005" blue="0.64311079550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="8J8-mL-KqM" secondAttribute="bottom" constant="9" id="1aD-IF-Ym6"/>
                                                         <constraint firstItem="CVo-Ap-vVc" firstAttribute="centerY" secondItem="jQf-zq-w3D" secondAttribute="centerY" id="LkV-sW-Hmf"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="ODU-oL-78l"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8J8-mL-KqM" secondAttribute="trailing" constant="8" id="bA1-EZ-NQd"/>
+                                                        <constraint firstItem="8J8-mL-KqM" firstAttribute="top" secondItem="jQf-zq-w3D" secondAttribute="top" constant="8" id="fBJ-ja-Bny"/>
                                                         <constraint firstItem="CVo-Ap-vVc" firstAttribute="leading" secondItem="jQf-zq-w3D" secondAttribute="leading" constant="8" id="hPB-pa-sn0"/>
                                                         <constraint firstAttribute="trailing" secondItem="CVo-Ap-vVc" secondAttribute="trailing" constant="20" id="sBt-EF-oOd"/>
                                                     </constraints>
@@ -235,6 +250,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="176" height="223"/>
                                         <connections>
+                                            <outlet property="favButton" destination="8J8-mL-KqM" id="j2b-DG-R0R"/>
                                             <outlet property="recipeImageView" destination="LGZ-8I-ZgY" id="1G7-6d-Q5v"/>
                                             <outlet property="recipeTitleLabel" destination="CVo-Ap-vVc" id="JiO-tT-8AX"/>
                                             <segue destination="Ctp-8r-smY" kind="show" id="OtW-8W-eZL"/>
@@ -505,12 +521,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uO3-gl-ixc"/>
-        <segue reference="Edm-ax-sbP"/>
+        <segue reference="LDJ-BI-bWa"/>
+        <segue reference="OtW-8W-eZL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Food-Spaghetti-icon" width="128" height="128"/>
         <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="favor-icon" width="30" height="30"/>
         <image name="feed_tab" width="25" height="25"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profile_tab" width="25" height="25"/>
