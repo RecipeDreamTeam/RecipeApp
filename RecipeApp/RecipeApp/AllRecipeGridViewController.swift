@@ -8,10 +8,12 @@
 import UIKit
 import AlamofireImage
 import Parse
+import LocalAuthentication
 
 class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var recipes = [PFObject]()
+    var favorites = [PFObject]()
     let myRefreshControl = UIRefreshControl()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -57,6 +59,17 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
                 self.myRefreshControl.endRefreshing()
             }
         }
+        
+        let query2 = PFQuery(className: "Favorites")
+        query2.whereKey("user", equalTo: PFUser.current())
+        query2.includeKeys(["recipe"])
+        query2.findObjectsInBackground { favorites, error in
+            if favorites != nil {
+                self.favorites = favorites!
+                self.collectionView.reloadData()
+                self.myRefreshControl.endRefreshing()
+            }
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,22 +91,83 @@ class AllRecipeGridViewController: UIViewController, UICollectionViewDataSource,
         cell.recipeImageView.af.setImage(withURL: url)
         cell.favButton.tag = indexPath.item
         cell.favButton.addTarget(self, action: #selector(self.addFavorite), for: .touchUpInside)
+        var favorited = false
+        for favorite in favorites {
+            let recipeInFav = favorite["recipe"] as! PFObject
+            let recipeInCell = recipe as! PFObject
+            if recipeInFav.objectId == recipeInCell.objectId{
+                favorited = true
+            }
+        }
+        if favorited {
+            cell.favButton.setImage(UIImage(named:"favor-icon-red"), for: UIControl.State.normal)
+            //cell.favButton.removeTarget(self, action: #selector(self.addFavorite), for: .touchUpInside)
+        } else {
+            cell.favButton.setImage(UIImage(named:"favor-icon"), for: UIControl.State.normal)
+            cell.favButton.tag = indexPath.item
+            //cell.favButton.addTarget(self, action: #selector(self.addFavorite), for: .touchUpInside)
+        }
+        cell.favButton.addTarget(self, action: #selector(self.addFavorite), for: .touchUpInside)
         
         return cell
     }
     
     @objc func addFavorite(sender: UIButton) {
-        let favorite = PFObject(className: "Favorites")
-        favorite["user"] = PFUser.current()!
-        favorite["recipe"] = recipes[sender.tag]
-        
-        favorite.saveInBackground { (success, error) in
-            if success {
-                print("saved")
-            } else {
-                print("error")
+        var toDelete = false
+        for favorite in favorites {
+            let recipeToFind = recipes[sender.tag] as! PFObject
+            let recipeInFav = favorite["recipe"] as! PFObject
+            if recipeInFav.objectId == recipeToFind.objectId {
+                toDelete = true
+                let deleteQuery = PFQuery(className: "Favorites")
+                deleteQuery.whereKey("objectId", equalTo: favorite.objectId)
+                deleteQuery.findObjectsInBackground { objs, e in
+                    for obj in objs! {
+                        obj.deleteInBackground { success, e in
+                            if success {
+                                let queryReloadFavs = PFQuery(className: "Favorites")
+                                queryReloadFavs.whereKey("user", equalTo: PFUser.current())
+                                queryReloadFavs.includeKeys(["recipe"])
+                                queryReloadFavs.findObjectsInBackground { favorites, error in
+                                    if favorites != nil {
+                                        self.favorites = favorites!
+                                        self.collectionView.reloadData()
+                                        self.myRefreshControl.endRefreshing()
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
+        
+        if(toDelete == false) {
+            let favorite = PFObject(className: "Favorites")
+            favorite["user"] = PFUser.current()!
+            favorite["recipe"] = recipes[sender.tag]
+            
+            favorite.saveInBackground { (success, error) in
+                if success {
+                    print("saved")
+                    let queryReloadFavs = PFQuery(className: "Favorites")
+                    queryReloadFavs.whereKey("user", equalTo: PFUser.current())
+                    queryReloadFavs.includeKeys(["recipe"])
+                    queryReloadFavs.findObjectsInBackground { favorites, error in
+                        if favorites != nil {
+                            self.favorites = favorites!
+                            self.collectionView.reloadData()
+                            self.myRefreshControl.endRefreshing()
+                        }
+                    }
+                } else {
+                    print("error")
+                }
+            }
+        }
+        
+
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
