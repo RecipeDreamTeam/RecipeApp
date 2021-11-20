@@ -43,7 +43,9 @@ Gif showing user can scroll through a list of recipes. Also shows tab navigation
 
 <img src='https://media.giphy.com/media/x42iaz6EDrs1P04x6a/giphy.gif' width='250' /><br>
 
-- [ ] User can favorite recipes to their profile and view the favorited recipes in their profile screen
+- [x] User can favorite recipes to their profile and view the favorited recipes in their profile screen
+
+<img src="http://g.recordit.co/prAcEcegKS.gif" width=250><br>
 - [ ] User can remain persistently logged in and user can log out
 
 **Optional Nice-to-have Stories**
