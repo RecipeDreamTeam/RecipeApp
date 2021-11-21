@@ -16,13 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="Food-Spaghetti-icon" translatesAutoresizingMaskIntoConstraints="NO" id="HzH-pV-rsU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Food-Spaghetti-icon" translatesAutoresizingMaskIntoConstraints="NO" id="HzH-pV-rsU">
                                 <rect key="frame" x="143" y="250" width="128" height="128"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HzH-pV-rsU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="206" id="3bk-IB-2lm"/>
                             <constraint firstItem="HzH-pV-rsU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8qz-s2-afq"/>
                         </constraints>
                     </view>

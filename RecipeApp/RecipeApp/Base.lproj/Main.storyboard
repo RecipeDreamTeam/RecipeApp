@@ -454,7 +454,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lJo-Df-aSI">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="MNL-ds-gbK" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainNavigationController" modalPresentationStyle="fullScreen" id="MNL-ds-gbK" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="IcG-nW-HPc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
